@@ -12,15 +12,14 @@ import java.util.Arrays;
 import java.util.Hashtable;
 
 public class TwoSum {
-    public int[] twoSum(int[] listIn, int target) {
-
+    public int[] twoSum(int[] nums, int target) {
         Hashtable<Integer, Integer> h = new Hashtable<>();
-        for (int i = 0; i < listIn.length; i++) {
-            int tmp = target - listIn[i];
+        for (int i = 0; i < nums.length; i++) {
+            int tmp = target - nums[i];
             if (h.containsKey(tmp)) {
                 return new int[]{h.get(tmp), i};
             }
-            h.put(listIn[i], i);
+            h.put(nums[i], i);
         }
         return new int[]{};
     }
